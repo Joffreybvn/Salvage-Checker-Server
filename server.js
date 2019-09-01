@@ -133,11 +133,12 @@ const userLogin = (characterId, access_token, callback) => {
                     }
                 })
             }
-            client.close();
         })
     }, (err) => {
         callback(false)
-    })
+    });
+
+    client.close();
 };
 
 router.get('/login/callback', (req, res) => {
