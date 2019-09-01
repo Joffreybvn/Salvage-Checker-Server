@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salvage Site Checker</title>
+
+    <link type="text/css" rel="stylesheet" href="style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script>
+        var socket = io();
+    </script>
+</head>
+<body>
+
+<form id="siteForm">
+    <div class="form-content">
+        <div class="textarea">
+            <div class="header-area">
+                <label for="scan-textarea">Probe Scan copy</label>
+                <button id="scan-clear">clear</button>
+                <button id="scan-paste">paste & replace</button>
+            </div>
+            <textarea id="scan-textarea" required></textarea>
+        </div>
+        <div class="textarea">
+            <div class="header-area">
+                <label for="bookmarks-textarea">Bookmarks copy</label>
+                <button id="bookmarks-clear">clear</button>
+                <button id="bookmarks-paste">paste & replace</button>
+            </div>
+            <textarea id="bookmarks-textarea" required></textarea>
+        </div>
+    </div>
+    <div class="form-button">
+        <button type="submit" id="process">Process</button>
+        <p>Contact: Nyco Di Valones - This tool works with the english version of EVE Online.</p>
+    </div>
+</form>
+
+<div class="output">
+    <p>Result</p>
+    <div class="result">
+        <div class="to-salvage">
+            <p>To salvage:</p>
+            <div>
+                <div class="sort-buttons">
+                    <button id="salvage-id-ascendant">by id</button>
+                    <button id="salvage-date-ascendant">by date</button>
+                    <button id="salvage-name-ascendant">by name</button>
+                </div>
+                <table id="output-salvage"></table>
+            </div>
+        </div>
+        <div class="new-anomalies">
+            <p>New anomaly:</p>
+            <div>
+                <div class="sort-buttons">
+                    <button id="anomaly-id-ascendant">by id</button>
+                    <button id="anomaly-name-ascendant">by name</button>
+                </div>
+                <table id="output-anomaly"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="common.min.js"></script>
+<script type="text/javascript" src="sorter.min.js"></script>
+<script type="text/javascript" src="sitechecker.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "salvage-checker-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Nyco Di Valones",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "eve-sso-simple": "^2.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "mongodb": "^3.3.0",
+    "request": "latest",
+    "socket.io": "^2.2.0"
+  },
+  "engines": {
+    "node": "12.6.0"
+  }
+}
